@@ -1,0 +1,34 @@
+<script>document.body.style.overflowX = "hidden";</script>
+
+<div style="background-color:rgb(44, 62, 80); color:white; text-align:center; margin-left:-3000px; margin-right:-3000px;">
+	<br/>
+	<br/>
+	<h1>SHOUTBOX</h1>
+	<h2>
+		--- <img src="ShoutBoxWhite.png" style="vertical-align:middle; width:40px;"> ---<br/>
+		Tweet Faster.
+	</h2>
+	<br/>
+	<br/>
+</div>
+
+<div style="color:rgb(44, 62, 80); text-align:center; margin-left:-3000px; margin-right:-3000px;">
+	<br/><br/>
+	<h2>USERNAME:</h2>
+	<h3>@<%= user.username %></h3>
+	<br/><br/>
+</div>
+
+<div style="background-color:rgb(44, 62, 80); color:white; text-align:center; margin-left:-3000px; margin-right:-3000px;">
+	<br/><br/>
+	<h2>NAME:</h2>
+	<h3><%= user.displayName %></h3>
+	<br/><br/>
+</div>
+
+<div style="background-color:white; text-align:center; margin-left:-3000px; margin-right:-3000px;">
+	<br/><br/>
+	<h2>PHOTO:</h2>
+	<img src="<%= user.photos[0].value %>">
+	<br/><br/>
+</div>
