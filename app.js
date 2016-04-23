@@ -8,6 +8,7 @@ var express           =     require('express'),
 	config            =     require('./config'),
 	mysql             =     require('mysql'),
 	twitterAPI        =     require('node-twitter-api'),
+	expressLayouts    =     require("express-ejs-layouts"),
 	app               =     express();
 
 //Define MySQL parameter in Config.js file.
@@ -67,6 +68,8 @@ passport.use(new TwitterStrategy({
 // Template rendering, etc.
 app.set('views', __dirname + '/templates');
 app.set('view engine', 'ejs');
+//app.set('view options', {layout: 'layout.ejs'});
+app.use(expressLayouts);
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(session({ secret: 'keyboard cat',
@@ -75,7 +78,9 @@ app.use(session({ secret: 'keyboard cat',
 					key: 'sid'}));
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(express.static(__dirname + '/img'));
+app.use('/img', express.static(__dirname + '/img'));
+app.use('/assets', express.static(__dirname + "/assets"));
+app.use('/images', express.static(__dirname + "/images"));
 
 app.get('/', function(req, res){
   res.render('index', { user: req.user });
