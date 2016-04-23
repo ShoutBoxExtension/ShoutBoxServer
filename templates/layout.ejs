@@ -2,6 +2,9 @@
 <html lang="en">
 	<head>
 		<title>ShoutBox Options</title>
+		<link rel="icon" 
+	      type="image/png" 
+	      href="img/ShoutBox128.png">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -10,48 +13,30 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
 
-	<body>
+	<body style="overflow-x:hidden;">
 
 		<!-- Page Wrapper -->
 		<div id="page-wrapper" style="color: #e2dacf">
 
 			<!-- Header -->
 				<header id="header" class="alt">
-					<h1><a href="index.html">Solid State</a></h1>
-					<nav>
+					<h1><a href="index.html">ShoutBox</a></h1>
+					<!-- <nav>
 						<a href="#menu">Menu</a>
-					</nav>
+					</nav> -->
 				</header>
 
-			<!-- Menu -->
-				<nav id="menu">
+			<!-- Banner -->
+				<section id="banner">
 					<div class="inner">
-						<h2>Menu</h2>
-						<ul class="links">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="generic.html">Generic</a></li>
-							<li><a href="elements.html">Elements</a></li>
-							<li><a href="#">Log In</a></li>
-							<li><a href="#">Sign Up</a></li>
-						</ul>
-						<a href="#" class="close">Close</a>
+						<div class="logo"><span class="icon fa-diamond"></span></div>
+						<h2>ShoutBox</h2>
+						<p>Tweet using the Chrome address bar</p>
 					</div>
-				</nav>
+				</section>
 
 			<!-- Main -->
-				<div style="overflow-x:hidden;">
-					<% if (!user) { %>
-						<p>
-						<a href="/">Home</a> | 
-						<a href="/login">Log In</a>
-						</p>
-					<% } else { %>
-						<p>
-						<a href="/">Home</a> | 
-						<a href="/account">Account</a> | 
-						<a href="/logout">Log Out</a>
-						</p>
-					<% } %>
+				<div>
 					<%- body %>
 				</div>
 
@@ -62,5 +47,6 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<script>document.body.style.overflowX = "hidden";</script>
 	</body>
 </html>

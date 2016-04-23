@@ -1706,10 +1706,17 @@
 			color: #ffffff !important;
 		}
 
+		a.first_button:not(.button) {
+			padding-right: 10px;
+		}
+
+		a.block:not(.button) {
+			display: block;			
+		}
+
 		a.special:not(.button) {
 			text-decoration: none;
 			border-bottom: 0;
-			display: block;
 			font-family: Raleway, Helvetica, sans-serif;
 			font-size: 0.8em;
 			font-weight: 700;
@@ -2504,18 +2511,18 @@
 	input[type="button"],
 	button,
 	.button {
-		-moz-appearance: none;
+		/*-moz-appearance: none;
 		-webkit-appearance: none;
 		-ms-appearance: none;
 		appearance: none;
 		-moz-transition: background-color 0.2s ease-in-out;
 		-webkit-transition: background-color 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out;
-		transition: background-color 0.2s ease-in-out;
+		transition: background-color 0.2s ease-in-out;*/
 		background-color: transparent;
 		border-radius: 5px;
 		border: 0;
-		box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.125);
+		box-shadow: inset 0 0 0 0px rgba(255, 255, 255, 0.125);
 		color: #e2dacf !important;
 		cursor: pointer;
 		display: inline-block;
@@ -2524,8 +2531,8 @@
 		font-weight: 700;
 		height: 3.75em;
 		letter-spacing: 0.1em;
-		line-height: 3.75em;
-		padding: 0 2.25em;
+		/*line-height: 3.75em;
+		padding: 0 2.25em;*/
 		text-align: center;
 		text-decoration: none;
 		text-transform: uppercase;
@@ -2537,7 +2544,7 @@
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: rgba(255, 255, 255, 0.025);
+			/*background-color: rgba(255, 255, 255, 0.025);*/
 		}
 
 		input[type="submit"]:active,
@@ -3052,8 +3059,9 @@
 		}
 
 			#banner .logo .icon {
-				border-radius: 100%;
-				border: solid 2px rgba(255, 255, 255, 0.125);
+				/*border-radius: 100%;*/
+				/*border: solid 2px rgba(255, 255, 255, 0.125);*/
+
 				cursor: default;
 				display: inline-block;
 				font-size: 2em;
